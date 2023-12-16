@@ -1,0 +1,8 @@
+.bin
+.obj
+.vs
+CodeChallenge.Tests/bin
+CodeChallenge.Tests/obj
+CodeChallenge/bin
+CodeChallenge/obj
+CodeChallenge/CodeChallenge.csproj.user

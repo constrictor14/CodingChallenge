@@ -27,7 +27,7 @@ namespace CodeCodeChallenge.Tests.Integration
             _httpClient = _testServer.NewClient();
         }
 
-        [ClassCleanup]
+        [ClassCleanup(ClassCleanupBehavior.EndOfClass) ]
         public static void CleanUpTest()
         {
             _httpClient.Dispose();
