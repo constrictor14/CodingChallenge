@@ -5,6 +5,7 @@ using System.Text;
 
 using CodeChallenge.Models;
 using CodeChallenge.Services;
+
 using CodeCodeChallenge.Tests.Integration.Extensions;
 using CodeCodeChallenge.Tests.Integration.Helpers;
 
@@ -51,7 +52,7 @@ namespace CodeCodeChallenge.Tests.Integration
             var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
             var expectedFirstName = "John";
             var expectedLastName = "Lennon";
-            
+
             // Execute
             var getRequestTask = _httpClient.GetAsync($"api/reportingStructure/{employeeId}");
             var response = getRequestTask.Result;
@@ -61,23 +62,12 @@ namespace CodeCodeChallenge.Tests.Integration
             var reportingStructure = response.DeserializeContent<ReportingStructure>();
             Assert.AreEqual(expectedFirstName, reportingStructure.Employee.FirstName);
             Assert.AreEqual(expectedLastName, reportingStructure.Employee.LastName);
+
+            // Test that the calculation matches the payload.
             var expetedNumberOfReports = ReportingStructureService.CountReports(reportingStructure.Employee);
             Assert.AreEqual(expetedNumberOfReports, reportingStructure.NumberOfReports);
-
-            // The Update Employee Test is somewhat interfering with this test as it changes the data state.
-            if (reportingStructure.Employee.DirectReports != null)
-            {
-                if (reportingStructure.Employee.DirectReports.Count > 1)
-                {
-                    expetedNumberOfReports = 4;
-                    Assert.AreEqual(expetedNumberOfReports, reportingStructure.NumberOfReports);
-                }
-                else
-                {
-                    expetedNumberOfReports = 1;
-                    Assert.AreEqual(expetedNumberOfReports, reportingStructure.NumberOfReports);
-                }
-            }
+            
+            Assert.IsTrue(reportingStructure.Employee.DirectReports != null);            
         }
 
         /// <summary>

@@ -1,0 +1,293 @@
+{
+	"_type": "export",
+	"__export_format": 4,
+	"__export_date": "2023-12-17T05:18:08.321Z",
+	"__export_source": "insomnia.desktop.app:v0.2.3-a",
+	"resources": [
+		{
+			"_id": "req_9b2f6a2de67f472e933d239d3e6da8b5",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702789994064,
+			"created": 1702691958978,
+			"url": "localhost:8080/api/employee",
+			"name": "New Employee",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "  {\n    \"employeeId\": \"03aa1462-ffa9-4978-901b-7c041562cf6a\",\n    \"firstName\": \"Brian\",\n    \"lastName\": \"Epstein\",\n    \"position\": \"Development VP\",\n    \"department\": \"Engineering\",\n    \"directReports\": [\n      {\n        \"employeeId\": \"16a596ae-edd3-4847-99fe-c4518e82c86f\"\n      }\n    ]\n  }"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702691958978,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"parentId": null,
+			"modified": 1702790175301,
+			"created": 1702690701939,
+			"name": "Mindex - Code Challenge Test",
+			"description": "",
+			"scope": "collection",
+			"_type": "workspace"
+		},
+		{
+			"_id": "req_ce94118d3fc2480c965320ff98459444",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702790096057,
+			"created": 1702790003311,
+			"url": "localhost:8080/api/compensation",
+			"name": "New Compensation",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"EmployeeId\":\"03aa1462-ffa9-4978-901b-7c001562cf6f\",\n\t\"Salary\":1940.83,\n\t\"EffectiveDate\":\"1940-07-07T12:00:00\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702691396559.5,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_03dee9ee2d6649e49956e9e95d968820",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702691191932,
+			"created": 1702690834141,
+			"url": "localhost:8080/api/employee/b7839309-3348-463b-a7e3-5de1c168beb3",
+			"name": "Update Employee",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "  {\n    \"employeeId\": \"b7839309-3348-463b-a7e3-5de1c168beb3\",\n    \"firstName\": \"Paul\",\n    \"lastName\": \"McCartney\",\n    \"position\": \"Developer IV\",\n    \"department\": \"Engineering\"\n  }"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690834141,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_9a9ccce5fe6d4e6093a333b4d8be8922",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702690824159,
+			"created": 1702690698938,
+			"url": "http://localhost:8080/api/employee/b7839309-3348-463b-a7e3-5de1c168beb3",
+			"name": "Get Employee (McCartney)",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690698937,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_9cbd6293a2fa45458a9107361badb0aa",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702762439407,
+			"created": 1702762418321,
+			"url": "http://localhost:8080/api/compensation/03aa1462-ffa9-4978-901b-7c001562cf6f",
+			"name": "Get Compensation (Ringo)",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690698912,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_0cd3a42091bc40b9b99c5e646cc303cc",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702693051667,
+			"created": 1702693048479,
+			"url": "http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"name": "Get Employee (Lennon)",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690698887,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_d2d273f3a66e45a688f4c8118f42592f",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702696469871,
+			"created": 1702696462386,
+			"url": "http://localhost:8080/api/reportingStructure/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"name": "Get Reporting Structure By ID (Lennon)",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690698837,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "req_7a5fc0e49760415599950f44d72fb52e",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702706930407,
+			"created": 1702706921663,
+			"url": "http://localhost:8080/api/reportingStructure/b7839309-3348-463b-a7e3-5de1c168beb3",
+			"name": "Get Reporting Structure By ID (McCartney)",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "User-Agent",
+					"value": "insomnium/0.2.3-a"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1702690698787,
+			"isPrivate": false,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"segmentParams": [],
+			"_type": "request"
+		},
+		{
+			"_id": "env_006a3ea310614f1681d96d8bdb15eb64",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702690700938,
+			"created": 1702690700938,
+			"name": "Base Environment",
+			"data": {},
+			"dataPropertyOrder": null,
+			"color": null,
+			"isPrivate": false,
+			"metaSortKey": 1702690700938,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_dc4ed4c37fcd4e58b43257c1725e8034",
+			"parentId": "wrk_32ee7ba652d54992aa32f6a7511f075b",
+			"modified": 1702690701938,
+			"created": 1702690701938,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		}
+	]
+}
