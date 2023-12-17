@@ -38,7 +38,7 @@ namespace CodeChallenge.Services
                 // Create the Reporting Structure
                 ReportingStructure reportingStructure = new ReportingStructure()
                 {
-                    Employee = (Employee)employee, //.Clone()
+                    Employee = (Employee)employee,
                     NumberOfReports = CountReports((Employee)employee)
                 };
 

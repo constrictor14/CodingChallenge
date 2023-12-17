@@ -89,7 +89,7 @@ namespace CodeCodeChallenge.Tests.Integration
             // Arrange
             var employee = new Employee()
             {
-                EmployeeId = "03aa1462-ffa9-4978-901b-7c001562cf6f",
+                EmployeeId = "62c1084e-6e34-4630-93fd-9153afb65309", // Changed this because that was Ringo Starr's id.
                 Department = "Engineering",
                 FirstName = "Pete",
                 LastName = "Best",
